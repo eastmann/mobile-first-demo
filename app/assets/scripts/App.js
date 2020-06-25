@@ -1,1 +1,2 @@
-alert('This is just a demo!!!');
+import css from '../styles/styles.css';
+
