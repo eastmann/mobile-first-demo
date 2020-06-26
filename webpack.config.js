@@ -16,8 +16,13 @@ module.exports = {
     },
     mode: 'development',
     devServer: {
+        before: function(app, server) {
+            server._watch('./app/**/*.html');
+        },
         contentBase: path.join(__dirname, 'app'),
-        port: 3333
+        port: 3333,
+        host: '0.0.0.0',
+        hot: true
     },
     module: {
         rules: [
