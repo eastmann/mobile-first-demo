@@ -1,0 +1,29 @@
+.row {
+    @mixin atMedium {
+        display: flex;
+    }
+
+    &__cell.-medium-4 {
+        @mixin atMedium {
+            width: 33.33%;
+        }
+    }
+
+    &__cell.-medium-8 {
+        @mixin atMedium {
+            width: 66.66%;
+        }
+    }
+
+    &.-gutters {
+        @mixin atMedium {
+            margin-right: -65px;
+        }
+    }
+
+    &.-gutters > &__cell {
+        @mixin atMedium {
+            padding-right: 65px;
+        }
+    }
+}
