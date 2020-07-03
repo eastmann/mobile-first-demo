@@ -9,6 +9,12 @@
         }
     }
 
+    &__cell.-medium-6 {
+        @mixin atMedium {
+            width: 50%;
+        }
+    }
+
     &__cell.-medium-8 {
         @mixin atMedium {
             width: 66.66%;
@@ -24,6 +30,18 @@
     &.-gutters > &__cell {
         @mixin atMedium {
             padding-right: 65px;
+        }
+    }
+
+    &.-gutters.-large {
+        @mixin atMedium {
+            margin-right: -100px;
+        }
+    }
+
+    &.-gutters.-large > &__cell {
+        @mixin atMedium {
+            padding-right: 100px;
         }
     }
 }
