@@ -3,6 +3,12 @@
         display: flex;
     }
 
+    &__cell.-large-4 {
+        @mixin atLarge {
+            width: 33.33%;
+        }
+    }
+
     &__cell.-medium-4 {
         @mixin atMedium {
             width: 33.33%;
@@ -33,6 +39,18 @@
         }
     }
 
+    &.-gutters.-small {
+        @mixin atMedium {
+            margin-right: -45px;
+        }
+    }
+
+    &.-gutters.-small > &__cell {
+        @mixin atMedium {
+            padding-right: 45px;
+        }
+    }
+
     &.-gutters.-large {
         @mixin atMedium {
             margin-right: -100px;
@@ -42,6 +60,20 @@
     &.-gutters.-large > &__cell {
         @mixin atMedium {
             padding-right: 100px;
+        }
+    }
+
+    &.-equal {
+        display: block;
+
+        @mixin atLarge {
+            display: flex;
+        }
+    }
+
+    &.-equal > &__cell {
+        @mixin atLarge {
+            display: flex;
         }
     }
 }
